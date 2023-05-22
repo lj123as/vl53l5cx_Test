@@ -108,12 +108,13 @@ int main(void)
 	//* reset IIC
 	IIC_reset();
 	
-	example1();
+//	example1();
+	Self_SimpleRanging_Process();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	HAL_StatusTypeDef status = HAL_ERROR;
+//	HAL_StatusTypeDef status = HAL_ERROR;
   while (1)
   {
     /* USER CODE END WHILE */

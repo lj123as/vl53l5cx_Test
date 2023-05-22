@@ -16,15 +16,34 @@
 */
 
 #include "data_show.h"
+#include "stdio.h"
+
+#define NUMBER_OF_ZONES					64
+
+static void display_commands_banner(void)
+{
+  /* clear screen */
+  printf("%c[2H", 27);
+
+  printf("53L5A1 Simple Ranging demo application\n");
+  printf("--------------------------------------\n\n");
+
+  printf("Use the following keys to control application\n");
+  printf(" 'r' : change resolution\n");
+  printf(" 's' : enable signal and ambient\n");
+  printf(" 'c' : clear screen\n");
+  printf("\n");
+}
+
 
 #if 0
+
 void print_result(VL53L5CX_ResultsData *Result)
 {
   int8_t i, j, k, l;
   uint8_t zones_per_line;
 
-  zones_per_line = ((Profile.RangingProfile == RS_PROFILE_8x8_AUTONOMOUS) ||
-         (Profile.RangingProfile == RS_PROFILE_8x8_CONTINUOUS)) ? 8 : 4;
+  zones_per_line = 8; // : 4;
 
   display_commands_banner();
 
@@ -32,7 +51,7 @@ void print_result(VL53L5CX_ResultsData *Result)
   for (l = 0; l < VL53L5CX_NB_TARGET_PER_ZONE; l++)
   {
     printf(" \033[38;5;10m%20s\033[0m : %20s\n", "Distance [mm]", "Status");
-    if ((Profile.EnableAmbient != 0) || (Profile.EnableSignal != 0))
+    if (1) //(Profile.EnableAmbient != 0) || (Profile.EnableSignal != 0))
     {
       printf(" %20s : %20s\n", "Signal [kcps/spad]", "Ambient [kcps/spad]");
     }
@@ -40,7 +59,7 @@ void print_result(VL53L5CX_ResultsData *Result)
 
   printf("\n\n");
 
-  for (j = 0; j < Result->NumberOfZones; j += zones_per_line)
+  for (j = 0; j < NUMBER_OF_ZONES; j += zones_per_line)
   {
     for (i = 0; i < zones_per_line; i++) /* number of zones per line */
       printf(" -----------------");
@@ -64,19 +83,19 @@ void print_result(VL53L5CX_ResultsData *Result)
       }
       printf("|\n");
 
-      if ((Profile.EnableAmbient != 0) || (Profile.EnableSignal != 0))
+      if (1) //(Profile.EnableAmbient != 0) || (Profile.EnableSignal != 0))
       {
         /* Print Signal and Ambient */
         for (k = (zones_per_line - 1); k >= 0; k--)
         {
           if (Result->ZoneResult[j+k].NumberOfTargets > 0)
           {
-            if (Profile.EnableSignal != 0)
+            if (1) //Profile.EnableSignal != 0)
               printf("| %5ld  :  ", (long)Result->ZoneResult[j+k].Signal[l]);
             else
               printf("| %5s  :  ", "X");
 
-            if (Profile.EnableAmbient != 0)
+            if (1) //Profile.EnableAmbient != 0)
               printf("%5ld ", (long)Result->ZoneResult[j+k].Ambient[l]);
             else
               printf("%5s ", "X");

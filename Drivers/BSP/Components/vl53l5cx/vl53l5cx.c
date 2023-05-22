@@ -150,8 +150,8 @@ int32_t VL53L5CX_Init(VL53L5CX_Object_t *pObj)
     pObj->IsRanging = 0U;
     pObj->IsBlocking = 0U;
     pObj->IsContinuous = 0U;
-    pObj->IsAmbientEnabled = 0U;
-    pObj->IsSignalEnabled = 0U;
+    pObj->IsAmbientEnabled = 1U; //0U;
+    pObj->IsSignalEnabled = 1U; //0U;
     pObj->IsInitialized = 1U;
     ret = VL53L5CX_OK;
   }

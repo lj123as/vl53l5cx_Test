@@ -142,7 +142,7 @@ int example1(void)
 			VL53L5CX_API_REVISION);
 
 	//* change resolution
-	vl53l5cx_set_resolution(&Dev, VL53L5CX_RESOLUTION_8X8);
+//	vl53l5cx_set_resolution(&Dev, VL53L5CX_RESOLUTION_8X8);
 	
 	/*********************************/
 	/*         Ranging loop          */
@@ -150,6 +150,7 @@ int example1(void)
 
 	status = vl53l5cx_start_ranging(&Dev);
 
+	//
 	loop = 0;
 	while(loop < 10)
 	{

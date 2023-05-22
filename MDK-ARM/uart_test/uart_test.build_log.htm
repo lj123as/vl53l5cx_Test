@@ -21,21 +21,25 @@ Target DLL:      Segger\JL2CM3.dll V2.99.40.0
 Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
-F:\61. Embedded scenarios\02. multi_zones\01. VL53L5CX\self_multi_zone_vl53l5cx\MDK-ARM\uart_test.uvprojx
-Project File Date:  05/21/2023
+F:\61. Embedded scenarios\02. multi_zones\01. VL53L5CX\vl53l5cx_Test\MDK-ARM\uart_test.uvprojx
+Project File Date:  05/22/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'E:\programs\Keil_v5\ARM\ARMCC\Bin'
 Build target 'uart_test'
 Note: source file '../Drivers/BSP/Components/vl53l5cx/porting/platform.c' - object file renamed from 'uart_test\platform.o' to 'uart_test\platform_1.o'.
-compiling Example_1_ranging_basic.c...
-..\X-CUBE-TOF1\App\Example_1_ranging_basic.c(189): warning:  #1-D: last line of file ends without a newline
-  }
-..\X-CUBE-TOF1\App\Example_1_ranging_basic.c: 1 warning, 0 errors
+compiling example.c...
+..\X-CUBE-TOF1\App\example.c(183): warning:  #177-D: variable "loop"  was declared but never referenced
+  	static	uint8_t 				status, loop, isAlive, isReady, i;
+..\X-CUBE-TOF1\App\example.c(183): warning:  #177-D: variable "isReady"  was declared but never referenced
+  	static	uint8_t 				status, loop, isAlive, isReady, i;
+..\X-CUBE-TOF1\App\example.c(183): warning:  #177-D: variable "i"  was declared but never referenced
+  	static	uint8_t 				status, loop, isAlive, isReady, i;
+..\X-CUBE-TOF1\App\example.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=17202 RO-data=88318 RW-data=32 ZI-data=4512  
+Program Size: Code=18712 RO-data=88316 RW-data=28 ZI-data=6612  
 FromELF: creating hex file...
-"uart_test\uart_test.axf" - 0 Error(s), 1 Warning(s).
+"uart_test\uart_test.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -58,7 +62,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.5.0
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:06
 </pre>
 </body>
 </html>

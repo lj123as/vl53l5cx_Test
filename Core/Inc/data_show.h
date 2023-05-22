@@ -3,6 +3,6 @@
 
 #include "vl53l5cx_api.h"
 
-void print_result(VL53L5CX_ResultsData *Result);
+//void print_result(VL53L5CX_ResultsData *Result);
 
 #endif

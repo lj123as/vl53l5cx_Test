@@ -399,11 +399,6 @@
               <FilePath>../Core/Src/main.c</FilePath>
             </File>
             <File>
-              <FileName>data_show.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\data_show.c</FilePath>
-            </File>
-            <File>
               <FileName>gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/gpio.c</FilePath>
@@ -470,6 +465,11 @@
               </FileOption>
             </File>
             <File>
+              <FileName>data_show.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\data_show.c</FilePath>
+            </File>
+            <File>
               <FileName>stm32f4xx_it.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32f4xx_it.c</FilePath>
@@ -513,6 +513,11 @@
               <FileName>Example_10_motion_indicator.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\X-CUBE-TOF1\App\Example_10_motion_indicator.c</FilePath>
+            </File>
+            <File>
+              <FileName>example.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\X-CUBE-TOF1\App\example.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1827,9 +1832,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>::CMSIS</GroupName>
-        </Group>
-        <Group>
           <GroupName>Drivers/BSP/Components</GroupName>
           <GroupOption>
             <CommonProperty>
@@ -2238,6 +2240,9 @@
               </FileOption>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
     </Target>
